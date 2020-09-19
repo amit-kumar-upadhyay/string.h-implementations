@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stddef.h>
 #include<string.h>
-void *memchr(const void *s, int c, size_t n)
+void *memchrN(const void *s, int c, size_t n)
 {
     const unsigned char* p=s;
     const unsigned char* end =p+n;
@@ -24,7 +24,7 @@ void main ()
     char *p;
     char data[]="Amit Kumar Upadhyay";
     char search='y';
-    p=(char *)memchr(data,search,strlen(data));
+    p=(char *)memchrN(data,search,strlen(data));
     if(p!=NULL)
         puts(p);
     else
